@@ -1,8 +1,7 @@
-import pkg from "pg";
-import dotenv from "dotenv";
-dotenv.config();
+const { Pool } = require("pg");
+const dotenv = require("dotenv");
 
-const { Pool } = pkg; // Desestructurar Pool desde pg
+dotenv.config();
 
 const pool = new Pool({
     host: process.env.DB_HOST,
@@ -13,6 +12,4 @@ const pool = new Pool({
     ssl: { rejectUnauthorized: false }, // Si la BD requiere SSL
 });
 
-
-export { pool }; // Exportamos como objeto nombrado
-
+module.exports = { pool }; // Exportamos como objeto nombrado
