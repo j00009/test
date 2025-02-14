@@ -1,8 +1,7 @@
 const express = require("express");
 const { pool } = require("./db.js"); // Importa la conexión a la BD
-const dotenv = require("dotenv");
+const dotenv = require('dotenv').config();
 
-dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
