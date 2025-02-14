@@ -1,6 +1,6 @@
-import express from "express";
-import { pool } from "./db.js"; // Importa la conexión a la BD
-import dotenv from "dotenv";
+const express = require("express");
+const { pool } = require("./db.js"); // Importa la conexión a la BD
+const dotenv = require("dotenv");
 
 dotenv.config();
 
